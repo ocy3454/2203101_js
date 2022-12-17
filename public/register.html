@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>오찬영의 포트폴리오 회원가입</title>
+    <link rel="stylesheet" type="text/css" href="/public/styleTodo.css">
+</head>
+
+<body onload = "document.regform.<%= focus %>.focus();">
+    <div class="login_wrap">
+        <div class="sec_wrapper">
+            <div class="login_sec">
+                <div class="login_logo">회원가입</div>
+                <hr style="width: 170px; border: 1px solid #bbb;">
+                <div class="login_info">오찬영의 포트폴리오에 오신것을 환영합니다.<br><p style="color:red"><%= reginfo %></p></div>
+
+                <form name="regform" method="post" action="/ocy/register">
+                    
+                    <input type="text" name="username" placeholder="이름(2자~20자)" minlength='2' maxlength='20' style="width: 290px" value="<%= username %>" required /><br>
+                    
+                    <input type="text" name="userid" placeholder="아이디(4자~20자)" minlength='4' maxlength='20' style="width: 290px" value="<%= userid %>" required /><br>
+                    
+                    <!--보안상 비밀번호 자동완성 X-->
+                    <input type="password" name="userpw" placeholder="비밀번호(4자~20자)" minlength='4' maxlength='20' style="width: 290px" value="" required /><br>
+                    
+                    <input type="password" name="userpw_check" placeholder="비밀번호 확인" minlength='4' maxlength='20' style="width: 290px" value="" required /><br>
+                    
+                    <div class="addtodo_buttonlist">
+                        <input type="submit" value="회원가입" name="" style="background: rgb(50, 162, 210); cursor: pointer; margin-right: 90px;" onmouseover="this.style.textDecoration= 'underline';" onmouseout="this.style.textDecoration='none';">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

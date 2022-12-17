@@ -1,0 +1,585 @@
+body {
+  margin:20px;
+}
+a {
+  color:black;
+  text-decoration-line:none;
+}
+h1 {
+  border-bottom:1px solid gray;
+  padding-top:100px;
+  padding-bottom:110px;
+}
+h2 {
+  margin-right: 50px;
+  border-bottom:1px solid gray;
+}
+h3 {
+  border-bottom:1px solid gray;
+  padding-bottom:10px;
+}
+ol {
+  border-right:1px solid gray;
+  width:250px;
+  margin:0px;
+  padding:30px;
+}
+#loginpopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 1;
+}
+
+#loginpopup.hide {
+  display: none;
+}
+
+#loginpopup.has-filter {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#loginpopup .content {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+}
+
+.sec_wrapper {
+    display: inline-block;
+}
+
+.login_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 600px;
+    overflow: hidden;
+    margin-top: -300px;
+    margin-left: -275px;
+}
+
+.login_logo{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.login_sec {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin: 3px 3px;
+    display: block;
+    color: #222;
+    width: 800px;
+    background-color: #eee;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 2rem 2rem;
+}
+
+.login_info{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"]{
+    font-size: 16px;
+    font-family: inherit;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    background-color: rgb(50, 162, 210);
+    border-style: none;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    margin-left: 5px;
+}
+
+
+input[type="text"],
+input[type="password"]{
+    width: 480px;
+    height: auto;
+    line-height: normal;
+    padding: 0.7em .5em;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #999;
+    border-style: none;
+    margin-top: 5px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+#grid ol {
+  padding-left:10px;
+}
+#grid #article {
+  padding-left:60px;
+}
+.bttn-default {
+  color: #fff;
+}
+.bttn-primary,
+.bttn,
+.bttn-md {
+  color: #1d89ff;
+}
+.bttn-warning {
+  color: #feab3a;
+}
+.bttn-danger {
+  color: #ff5964;
+}
+.bttn-success {
+  color: #28b78d;
+}
+.bttn-royal {
+  color: #bd2df5;
+}
+.bttn,
+.bttn-lg,
+.bttn-md,
+.bttn-sm,
+.bttn-xs {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-color: transparent;
+  background: transparent;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+}
+.bttn-md {
+  font-size: 20px;
+  font-family: inherit;
+  padding: 5px 12px;
+}
+.bttn-simple {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-color: transparent;
+  background: transparent;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+  font-family: inherit;
+  padding: 5px 12px;
+  overflow: hidden;
+  border-width: 0;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.4);
+  color: #fff;
+  -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.bttn-simple:hover,
+.bttn-simple:focus {
+  opacity: 0.75;
+}
+.bttn-simple.bttn-md {
+  font-size: 20px;
+  font-family: inherit;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+.bttn-simple.bttn-primary {
+  background: #C8A5C4;
+}
+#grid #title {
+  padding:15px 10px 15px 20px; /* 내부여백 padding값 순서대로 top right bottom left */
+  line-height:20px; /*박스 높이*/
+  text-align: center;/*글씨 중앙*/
+  margin-bottom:1px; /* 하단에 외부여백 1px */
+  background:#C8A5C4;/*배경색*/
+}
+#grid #vacuum {
+ padding-top:150px;
+}
+#grid #vacuum2 {
+ padding-top:430px;
+}
+#grid #title2 {
+  padding:15px 10px 15px 20px; /* 내부여백 padding값 순서대로 top right bottom left */
+  line-height:20px;
+  text-align: center;
+  background:#C8A5C4;
+}
+#menu {
+  text-align: center;/*글자 중앙*/
+}
+#menu a {/*마우스 오버*/
+	display:block; /* a태그의 display속성을 block으로 설정 */
+	padding:15px 10px 15px 20px; /* 내부여백 padding값 순서대로 top right bottom left */
+	margin-bottom:1px; /* 하단에 외부여백 1px */
+	background-color:#EDEDEA; /* 바탕색 */
+	font:14px Verdana; /* 폰트 속성 순서대로 크기 글꼴 */
+	text-transform:uppercase; /* 폰트를 대문자로 바꿔준다. */
+}
+#menu a:hover {
+	padding-left:20px; /* 왼쪽 여백을 기존 15px에서 10px으로 줄여준다. */
+	border-left:15px solid #b6e24c; /* 줄어든 여백만큼 border로 10px을 지정해 준다. */
+	color:black; /* 폰트 색상 */
+}
+#footer {
+  bottom:0px; /*화면 아래 좌표 지*/
+  height:70px;
+  width: 100%;
+  padding-top:25px;
+  border-radius: 20px;
+  background-color: #ddd;
+}
+#footer-menu {
+  text-align: center;
+}
+#footer-menu a {
+  padding:15px 99px 15px 99px; /* 내부여백 padding값 순서대로 top right bottom left */
+  font:14px Verdana; /* 폰트 속성 순서대로 크기 글꼴 */
+  border-radius:2px;  /*10px만큼 모서리 둥글게 */
+  margin-right:5px; /* 하단에 외부여백 1px */
+  background-color:#EDEDEA; /* 바탕색 */
+  text-transform:uppercase; /* 폰트를 대문자로 바꿔준다. */
+}
+#footer-menu a:hover {
+  padding-top:17px; /* 왼쪽 여백을 기존 15px에서 10px으로 줄여준다. */
+  border-top:10px solid #b6e24c; /* 줄어든 여백만큼 border로 10px을 지정해 준다. */
+  padding-bottom:13px; /* 왼쪽 여백을 기존 15px에서 10px으로 줄여준다. */
+  border-bottom:10px solid #b6e24c; /* 줄어든 여백만큼 border로 10px을 지정해 준다. */
+  color:black; /* 폰트 색상 */
+}
+
+.floating {/* 폰트 색상 */
+  position: sticky;/*스크롤 위치에 따라 역동적이게 구 */
+  left: 2;/*왼쪽에서 2픽셀 떨어지게*/
+  top: 50px;/*맨위에서 50픽셀 떨어지는 순간부터 고정*/
+}
+.hover_effect_box {
+   width: 190px;
+   height: 180px;
+   margin: 0px;
+   border: 9.2px solid #f3f3f3;
+   overflow: hidden;/*창에 맞게 이미지 자르기*/
+   position: relative;/*벗어나도록*/
+   text-align: center;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;/*커서모양 default*/
+   background: #fff;
+   box-sizing: initial; /*기본값*/
+}
+.hover_effect_box .caption {/*박스 안 설정*/
+   width: 190px;
+   height: 180px;
+   position: absolute;/*자유 배치*/
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.hover_effect_box .content_bg {
+   display: block;
+   position: relative;
+}
+.hover_effect_box .caption_title {
+   text-transform: uppercase;/*글자를 대문자로 바꿈*/
+   color: #fff;
+   text-align: center;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;/*내부여백 각각 10px씩*/
+   background: #787878;
+}
+.hover_effect_box .caption_desc {
+    font-size: 0.9em;
+    line-height: 1.5;
+    position: relative;
+    color: #fff;
+    padding: 15px 10px 10px;
+    text-align: center;
+ }
+.hover_effect_box .caption_link {
+   display: inline-block;
+   text-decoration: none;
+   padding: 3px 14px;
+   background: #5a5a5a;
+   color: white;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}
+.hover_effect_box .caption_link:hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}
+.hover_effect_1 .content_bg {
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.hover_effect_1 .caption {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(210, 180, 140, 1);
+   transition: all 0.4s ease-in-out;
+}
+.hover_effect_1 .caption_title {
+   transform: translateY(-100px);
+   filter: alpha(opacity=0);
+   opacity: 0;
+   transition: all 0.2s ease-in-out;
+}
+.hover_effect_1 .caption_desc {
+   transform: translateY(100px);
+   filter: alpha(opacity=0);
+   opacity: 0;
+   transition: all 0.2s linear;
+}
+.hover_effect_1:hover .content_bg {
+   transform: scale(1.1,1.1);
+}
+.hover_effect_1 .caption_link {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   transition: all 0.2s ease-in-out;
+}
+.hover_effect_1:hover .caption {
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.hover_effect_1:hover .caption_title,
+.hover_effect_1:hover .caption_desc,
+.hover_effect_1:hover .caption_link {
+   filter: alpha(opacity=100);
+   opacity: 1;
+   transform: translateY(0px);
+}
+.hover_effect_1:hover .caption_desc {
+   transition-delay: 0.1s;
+}
+.hover_effect_1:hover .caption_link {
+   transition-delay: 0.2s;
+}
+@media(max-width:900px){
+  #grid{
+    display: block;
+  }
+  ol{
+    border-right:none;
+  }
+  h1 {
+    border-bottom:none;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.wrap-circles {
+  display: flex;
+}
+
+.content {
+  position: absolute; /*절대 위치*/
+  top: auto;
+  left: 50%;
+  width: 97%;
+  transform: translate(-50%, -50%);
+  display: flex; /*가로 배치*/
+  align-items: center; /*수직 중앙*/
+  justify-content: center; /*수평 중앙*/
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+  /*차례대로 그라데이션 적용*/
+}
+svg text {
+  font-family: 'Anton', sans-serif; /*글씨 폰트*/
+  font-size: 6rem;  /*font-size를 사용해 text의 글자 크기를 6rem으로 지정한다.*/
+  stroke-width: 1px; /*stroke-width를 사용해 외곽선 굵기를 변경한다.*/
+  stroke: #fff; /*stroke로 외곽선 색상을 흰색으로 한다.*/
+  fill: transparent; /*fill: transparent를 하여 글자 내부색은 투명으로 한다.*/
+  stroke-dashoffset: 750; /*대쉬 시작지점을 750으로 한다*/
+  stroke-dasharray: 750; /*외곽선을 대쉬형태로 만들고 대쉬길이를 750만큼 한다*/
+  animation: stroke 1.5s linear; /*애니메이션명 /시간/ 부드럽게*/
+  animation-fill-mode: forwards; /*100%에서 멈추 */
+}
+
+@keyframes stroke { /*keyframes 애니메이션 적  */
+  0% {
+    stroke-dashoffset: 750; /*끝지점에서 대쉬를 그림*/
+  }
+  70% {
+    fill: #fff;
+  }
+  100% {
+    stroke-dashoffset: 0; /*시작지점에서 대쉬를 그림*/
+    fill: #fff;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+progress {
+  width: 100%;
+  height: 50px;
+}
+/* section common */
+section {
+  padding:250px 0;
+  box-sizing:border-box;
+}
+h2 {
+  text-transform:uppercase;
+  text-align:center;
+  font-size:40px;
+  color:#212529;
+  font-weight:700;
+  font-family:'ESans', sans-serif;
+}
+.cnt_inner {
+  max-width:1024px;
+  margin:0 auto;
+}
+.border {
+  font-size:24px;
+  color:#333;
+  text-align:center;
+  margin:20px 0 40px;
+}
+p.border:before, p.border:after {
+  display:inline-block;
+  margin-top:-4px;
+  vertical-align:middle;
+  content:"";
+  background-color:#d0d0d0;
+  width:30px;
+  height:1px;
+}
+/* home */
+#home {
+  height: 50vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.type-wrap {
+  width: 27ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+            /*typing 함수이름 지정/22초안에 시작/깜박이게 0.5초마다 끝까//지정된 방향, 반대 방향 순으로 반복.*/
+  white-space: nowrap;/*가로로 긴 줄에서도 줄 바꿈을 하지 않고 표시*/
+  overflow: hidden;
+  border-right: 3px solid;/*커서효과 3픽셀*/
+  font:40px 'ESans' ,sans-serif;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent/*투명하게 하기*/
+  }
+}
+/* about */
+#about {
+  width:100%;
+  height:auto;
+  position:relative;
+}
+#about .desc_box {
+  width:98%;
+  display:table;
+  margin:0 auto;
+}
+#about .desc_box:after {
+  clear:both;
+  content:'';
+  display:block;
+}
+#about .desc {
+  width:33.33%;
+  text-align:center;
+  font-family:'NotoSansKR', sans-serif;
+  font-weight:300;
+  line-height:2;
+  display:table-cell;/*테이블 요소처럼*/
+  vertical-align:top;/*table-cell에서의 수직 정렬을 지정*/
+  text-align:center;
+}
+#about .desc .icon {
+  display:table;
+  margin:0 auto 40px;
+}
+#about .desc .icon p {
+  display:table-cell;
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  border:1px solid #cdcdcd;/*마우스포인터를 올릴시 1px만큼 두꺼워짐*/
+  text-align:center;
+  vertical-align:middle;
+  font-size:0;
+  transition:all 0.4s;/*0.4초가 지날경우 완전히 두꺼워짐*/
+}
+#about .desc .icon:hover p {
+  border-color:#636c77;
+}
+#about .desc .icon img {
+  height:50%;
+}
+#about b {
+  font-weight:500;
+  color:#3c3c3c;
+  font-size:18px;
+}
+#about .rt .icon img {
+  margin-right:12px;
+}
+#about ul {
+  width:100%;
+  box-sizing:border-box;
+}
+#about ul li {
+  display:table;
+  width:100%;
+}
+#about ul li a {
+  width:100%;
+  display:table-cell; vertical-align:middle;
+  text-align:center;
+  color:#646c77;
+}
+#about ul li a img {
+  vertical-align:middle;
+  height:24px;
+}
+#about ul li a span {
+  vertical-align:middle;
+  margin-left:8px;
+}

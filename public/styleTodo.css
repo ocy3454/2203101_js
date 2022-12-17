@@ -1,0 +1,274 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+
+body {
+    margin : 20px;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 600;
+}
+
+#sidebar {
+  float: left;
+  width: 250px;
+}
+
+.content {
+  position: relative; /*절대 위치*/
+  top: 80px;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  display: flex; /*가로 배치*/
+  align-items: center; /*수직 중앙*/
+  justify-content: center; /*수평 중앙*/
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+  /*차례대로 그라데이션 적용*/
+}
+svg text {
+  font-family: 'Anton', sans-serif; /*글씨 폰트*/
+  font-size: 6rem;  /*font-size를 사용해 text의 글자 크기를 6rem으로 지정한다.*/
+  stroke-width: 1px; /*stroke-width를 사용해 외곽선 굵기를 변경한다.*/
+  stroke: #fff; /*stroke로 외곽선 색상을 흰색으로 한다.*/
+  fill: transparent; /*fill: transparent를 하여 글자 내부색은 투명으로 한다.*/
+  stroke-dashoffset: 750; /*대쉬 시작지점을 750으로 한다*/
+  stroke-dasharray: 750; /*외곽선을 대쉬형태로 만들고 대쉬길이를 750만큼 한다*/
+  animation: stroke 1.5s linear; /*애니메이션명 /시간/ 부드럽게*/
+  animation-fill-mode: forwards; /*100%에서 멈추 */
+}
+
+@keyframes stroke { /*keyframes 애니메이션 적  */
+  0% {
+    stroke-dashoffset: 750; /*끝지점에서 대쉬를 그림*/
+  }
+  70% {
+    fill: #fff;
+  }
+  100% {
+    stroke-dashoffset: 0; /*시작지점에서 대쉬를 그림*/
+    fill: #fff;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+#title {
+  padding:15px 10px 15px 20px; /* 내부여백 padding값 순서대로 top right bottom left */
+  line-height:20px; /*박스 높이*/
+  text-align: center;/*글씨 중앙*/
+  margin-bottom:1px; /* 하단에 외부여백 1px */
+  background:#C8A5C4;/*배경색*/
+}
+#menu {
+  text-align: center;/*글자 중앙*/
+}
+#add {/*마우스 오버*/
+	display:block; /* a태그의 display속성을 block으로 설정 */
+	padding:20px 10px 15px 20px; /* 내부여백 padding값 순서대로 top right bottom left */
+	margin-bottom:1px; /* 하단에 외부여백 1px */
+	background-color:#EDEDEA; /* 바탕색 */
+	font:14px Verdana; /* 폰트 속성 순서대로 크기 글꼴 */
+	text-transform:uppercase; /* 폰트를 대문자로 바꿔준다. */
+}
+#add:hover {
+             cursor: pointer;
+	padding-left:20px; /* 왼쪽 여백을 기존 15px에서 10px으로 줄여준다. */
+	border-left:15px solid #b6e24c; /* 줄어든 여백만큼 border로 10px을 지정해 준다. */
+	color:black; /* 폰트 색상 */
+}
+
+.wrap_menu {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+    margin: 3px 3px;
+    display: block;
+    color: #222;
+    width: 300px;
+    border-bottom: 1px solid #666;
+    padding: 0.5rem 1.5rem;
+}
+
+#add_todo {
+    display: none;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    color: #444444;
+    width: 550px;
+    height: auto;
+    background-color: #f6f6f6;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 1.5rem;
+    border-radius: 1px;
+}
+
+#hide {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 600px;
+    overflow: hidden;
+    margin-top: -300px;
+    margin-left: -275px;
+}
+
+.addtodo_buttonlist {
+    margin-top: 30px;
+    display: block;
+    text-align: right;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"]{
+    font-size: 16px;
+    font-family: inherit;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    background-color: rgb(50, 162, 210);
+    border-style: none;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    margin-left: 5px;
+}
+
+
+input[type="text"],
+input[type="password"]{
+    width: 480px;
+    height: auto;
+    line-height: normal;
+    padding: 0.7em .5em;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #999;
+    border-style: none;
+    margin-top: 5px;
+}
+
+.rank {
+    font-size: 18px;
+}
+
+.div_mytodo {
+    display: block;
+    font-size: 19px;
+    font-weight: 600;
+    color: black;
+    width: 266px;
+    height: 60px;
+    background-color: #bcddef;
+    padding: 1rem;
+    margin: 9px 3px;
+    text-align: left;
+}
+
+.sec_wrapper {
+    display: inline-block;
+}
+
+table{
+    z-index: 2;
+    color: black;
+    width: 300px;
+    height: 60px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 1px;
+    border-spacing: 0px 0px;
+}
+
+.t_title{
+    font-family: 'Nanum Myeongjo', serif;
+    background-color: #eaeaea;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 1rem 1rem 0.7rem;
+    border-top: 20px solid white;
+}
+
+.t_detail{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #f2f2f2;
+    color: #555;
+    padding:15px 10px 15px 10px;
+    border-bottom: 1px solid white;
+}
+
+.t_pass{
+    cursor: pointer;
+    width: 40px;
+    background-color: #f2f2f2;
+    color: #808080;
+    font-size: 19px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.t_del{
+    cursor: pointer;
+    width: 40px;
+    font-size: 19px;
+    background-color: #f2f2f2;
+    color: #a33937;
+    font-weight: 900;
+    text-align: center;
+    border-bottom: 10px solid white;
+}
+
+/*for login.html*/
+
+.login_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 600px;
+    overflow: hidden;
+    margin-top: -300px;
+    margin-left: -275px;
+}
+
+.login_logo{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.login_sec {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin: 3px 3px;
+    display: block;
+    color: #222;
+    width: 350px;
+    background-color: #eee;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 2rem 2rem;
+}
+
+.login_info{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
