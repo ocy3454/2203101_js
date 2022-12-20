@@ -1,176 +1,196 @@
 <!doctype html>
 <html>
-
 <head>
-   <h3>
-     <div class="header-inner__mode">
-          <input type="button" value="회원가입" name="" onclick="location.href = '/ocy/go_register';" style="background: #efb64b; cursor: pointer;">
-          <input type="submit" value="로그인" name="" style="background: rgb(50, 162, 210); cursor: pointer; margin-right: 15px;" onclick="showLoginPopup(true)">   
-          <%= logininfo %>
-     </div>
-     <div id="loginpopup" class="hide">
-  <div class="content">
-    <p>
-        <div class="sec_wrapper">
-            <div class="login_sec">
-                <div class="login_logo">오찬영의 포트폴리오</div><hr style="width: 170px; border: 1px solid #bbb;">
-                <div class="login_info">환영합니다<br><p style="color:red"><%= logininfo %></p></div>
-                <form name="loginform" method="post" action="/ocy/login">
-                <input type="text" name="userid" placeholder="아이디" maxlength='20' style="width: 310px" required /><br>
-                <input type="password" name="userpw" placeholder="비밀번호" maxlength='20' style="width: 310px" required /><br><br>
-                <div class="addtodo_buttonlist">
-                    <input type="submit" value="로그인" name="" style="background: rgb(50, 162, 210); cursor: pointer; margin-right: 15px;" onclick="hide_addTodo()" onmouseover="this.style.textDecoration= 'underline';" onmouseout="this.style.textDecoration='none';">
-                    <input type="button" value="나가기" name="" style="background: #ea8d8a; cursor: pointer;" onclick="closeLoginPopup()" onmouseover="this.style.textDecoration= 'underline';" onmouseout="this.style.textDecoration='none';"> 	                        
-	    </div>
-            </form>  
-            </div>
-        </div>
-    </p>
-  </div>
+<h3>
+<div class="header">
+	<input type="button" value="회원가입" name="" onclick="location.href='/ocy/go_register';" 
+	style="background: #efb64b; cursor: pointer;">
+	<input type="submit" value="로그인" name="" style="background: rgb(50, 162, 210); cursor: pointer; 
+	margin-right: 15px;" onclick="addTodo()">
+	[ <%=logininfo %> ]
 </div>
-   </h3>
-    <title>오찬영의 포트폴리오</title>
-    <meta charset="utf-8">
-    <script src="/public/popup.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="/public/style.css">
-    <h1>
-            <div class="content" id="main">
-                <svg width=1000 height=200 viewBox="0 0 800 200">
-                    <text x="40" y="75%">오</text>
-                    <text x="120" y="70%">찬</text>
-                    <text x="200" y="70%">영</text>
-                    <text x="280" y="70%">의</text>
-                    <text x="360" y="75%">포</text>
-                    <text x="440" y="80%">트</text>
-                    <text x="520" y="75%">폴</text>
-                    <text x="600" y="70%">리</text>
-                    <text x="680" y="75%">오</text>
-                </svg>
-            </div>
-    </h1>
+</h3>
+<title>오찬영의 포트폴리오</title>
+<meta charset="utf-8">
+<script src="/public/module.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/public/style.css">
+<h1>
+<div class="content" id="main">
+	<svg width=1000 height=200 viewbox="0 0 800 200">
+	<text x="40" y="75%">오</text>
+	<text x="120" y="70%">찬</text>
+	<text x="200" y="70%">영</text>
+	<text x="280" y="70%">의</text>
+	<text x="360" y="75%">포</text>
+	<text x="440" y="80%">트</text>
+	<text x="520" y="75%">폴</text>
+	<text x="600" y="70%">리</text>
+	<text x="680" y="75%">오</text>
+	</svg>
+</div>
+</h1>
 </head>
-
 <body>
-    <div id="grid">
-        <ol>
-            <div id="title">MENU</div>
-            <div id="menu">
-                <a href="#main" title="Main으로 이동">MAIN</a>
-                <a href="#home" title="Home으로 이동">Home</a>
-                <a href="#about" title="About으로 이동">ABOUT</a>
-                <a href="#skills" title="skills로 이동">SKILLS</a>
-            </div><!--//menu-->
-            <div id="vacuum"></div>
-            <div class="floating">
-            <div id="title2">ToDoList</div>
-            <div class="hover_effect_box hover_effect_1">
-                <div class="content_bg">
-	        <img src="/public/imgs/html5.png" style="max-width: 100%; height: auto;">
-                </div>
-                <div class="caption">
-                    <div class="caption_title">HTML5</div>
-                    <div class="caption_desc">
-                      WWW를 통해 제공되는 정보를 나타낼 목적으로 사용되는 마크업 언어이다
-                    </div>
-                    <a href="1.html" class="caption_link">더 보기</a>
-                </div>
-            </div>
-            <div class="hover_effect_box hover_effect_1">
-                <div class="content_bg">
-                    <img src="/public/imgs/css3.png" style="max-width: 100%; height: auto;">
-                </div>
-                <div class="caption">
-                    <div class="caption_title">CSS3</div>
-                    <div class="caption_desc">
-                        Markup language 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다
-                    </div>
-                    <a href="2.html" class="caption_link">더 보기</a>
-                </div>
-            </div>
-            <div class="hover_effect_box hover_effect_1">
-                <div class="content_bg">
-                    <img src="/public/imgs/java.jpg" style="max-width: 100%; height: auto;">
-                </div>
-                <div class="caption">
-                    <div class="caption_title">JAVA</div>
-                    <div class="caption_desc">
-                        객체 지향적 프로그래밍 언어이다
-                    </div>
-                    <a href="3.html" class="caption_link">더 보기</a>
-                </div>
-            </div>
-            </div>
-        </ol>
-        <div id="article">
-          <section id="home">
-                <div class="type-wrap">
-                    WELCOME TO MY PORTFOLIO :)
-                </div>
-          </section>
-        <div id="vacuum2"></div>
-        <section id="about">
-            <div class="cnt_inner">
-                <h2>About</h2>
-                <p class="border">◆</p>
-                <div class="desc_box">
-                    <div class="desc lt onScroll inUp active">
-                        <div class="icon">
-                            <p>
-                                <img src="/public/imgs/about_icon01.png" alt="description">
-                            </p>
-                        </div>
-                        <b>인적 사항</b><br>
-                        군산대학교 컴퓨터공학과 3학년<br>
-                    </div>
-                    <div class="desc md onScroll inUp active">
-                        <div class="icon">
-                            <p>
-                                <img src="/public/imgs/about_icon02.png" alt="description /">
-                            </p>
-                        </div>
-                       <b>오찬영</b><br>
-                        정보처리 산업기사<br>
-                    </div>
-                    <div class="desc rt onScroll inUp active">
-                        <div class="icon">
-                            <p>
-                                <img src="/public/imgs/about_icon03.png" alt="contact /">
-                            </p>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="ocy1220@naver.com">
-                                    <img src="/public/imgs/icon_mail.png" alt="메일">
-                                    <span>ocy1220@naver.com</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="vacuum2"></div>
-        <section id="skills">
-                <h2>Skills</h2>
-                    <h2>HTML5</h2>
-	        <progress value="80" max="100"></progress>
-                    <h2>CSS3</h2>
-                    <progress value="60" max="100"></progress>
-                    <h2>JAVA</h2>
-                    <progress value="80" max="100"></progress>
-	        <h2>JavaScript</h2>
-                    <progress></progress>
-                    <h2>Node.js</h2>
-                    <progress></progress>
-        </section>
-            <div id ="footer">
-              <div id="footer-menu">
-                  <a href="#main" title="Main으로 이동">MAIN</a>
-                  <a href="#home" title="Home으로 이동">HOME</a>
-                  <a href="#about" title="About으로 이동">ABOUT</a>
-                  <a href="#skills" title="skills로 이동">SKILLS</a>
-              </div><!--//footer-menu-->
+<div id="hide">
+	<div id="add_todo">
+		<p>
+			<div class="sec_wrapper">
+				<div class="login_sec">
+					<div class="login_logo">오찬영의 포트폴리오</div>
+					<hr style="width: 170px; border: 1px solid #bbb;">
+					<div class="login_info">
+					</div>
+					<form name="loginform" method="post" action="/ocy/login">
+						<input type="text" name="userid" placeholder="아이디" maxlength='20' style="width: 310px" required/><br>
+						<input type="password" name="userpw" placeholder="비밀번호" maxlength='20' style="width: 310px" required/><br>
+						<br>
+						<div class="addtodo_buttonlist">
+							<input type="submit" value="로그인" name="" style="background: rgb(50, 162, 210); cursor: pointer; margin-right: 15px;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+							<input type="button" value="나가기" name="" style="background: #ea8d8a; cursor: pointer;" onclick="hide_addTodo()" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+						</div>
+					</form>
+				</div>
+			</div>
+		</p>
 	</div>
-        </div>
-</body>
-</html>
+</div>
+<div id="grid">
+	<ol>
+		<div id="title">
+			MENU
+		</div>
+		<div id="menu">
+			<a href="#main" title="Main으로 이동">MAIN</a>
+			<a href="#home" title="Home으로 이동">Home</a>
+			<a href="#about" title="About으로 이동">ABOUT</a>
+			<a href="#skills" title="skills로 이동">SKILLS</a>
+		</div>
+		<!--//menu-->
+		<div id="vacuum">
+		</div>
+		<div class="floating">
+			<div id="title2">
+				INTRO
+			</div>
+			<div class="hover_effect_box hover_effect_1">
+				<div class="content_bg">
+					<img src="/public/imgs/html5.png" style="max-width: 100%; height: auto;">
+				</div>
+				<div class="caption">
+					<div class="caption_title">
+						HTML5
+					</div>
+					<div class="caption_desc">
+						 WWW를 통해 제공되는 정보를 나타낼 목적으로 사용되는 마크업 언어이다
+					</div>
+					<a href="1.html" class="caption_link">더 보기</a>
+				</div>
+			</div>
+			<div class="hover_effect_box hover_effect_1">
+				<div class="content_bg">
+					<img src="/public/imgs/css3.png" style="max-width: 100%; height: auto;">
+				</div>
+				<div class="caption">
+					<div class="caption_title">
+						CSS3
+					</div>
+					<div class="caption_desc">
+						 Markup language 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다
+					</div>
+					<a href="2.html" class="caption_link">더 보기</a>
+				</div>
+			</div>
+			<div class="hover_effect_box hover_effect_1">
+				<div class="content_bg">
+					<img src="/public/imgs/java.jpg" style="max-width: 100%; height: auto;">
+				</div>
+				<div class="caption">
+					<div class="caption_title">
+						JAVA
+					</div>
+					<div class="caption_desc">
+						 객체 지향적 프로그래밍 언어이다
+					</div>
+					<a href="3.html" class="caption_link">더 보기</a>
+				</div>
+			</div>
+		</div>
+	</ol>
+	<div id="article">
+		<section id="home">
+		<div class="type-wrap">
+			 WELCOME TO MY PORTFOLIO :)
+		</div>
+		</section>
+		<div id="vacuum2">
+		</div>
+		<section id="about">
+		<div class="cnt_inner">
+			<h2>About</h2>
+			<p class="border">
+				◆
+			</p>
+			<div class="desc_box">
+				<div class="desc lt onScroll inUp active">
+					<div class="icon">
+						<p>
+							<img src="/public/imgs/about_icon01.png" alt="description">
+						</p>
+					</div>
+					<b>인적 사항</b><br>
+					 군산대학교 컴퓨터공학과 3학년<br>
+				</div>
+				<div class="desc md onScroll inUp active">
+					<div class="icon">
+						<p>
+							<img src="/public/imgs/about_icon02.png" alt="description /">
+						</p>
+					</div>
+					<b>오찬영</b><br>
+					 정보처리 산업기사<br>
+				</div>
+				<div class="desc rt onScroll inUp active">
+					<div class="icon">
+						<p>
+							<img src="/public/imgs/about_icon03.png" alt="contact /">
+						</p>
+					</div>
+					<ul>
+						<li>
+						<a href="ocy1220@naver.com">
+						<img src="/public/imgs/icon_mail.png" alt="메일">
+						<span>ocy1220@naver.com</span>
+						</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</section>
+		<div id="vacuum2">
+		</div>
+		<section id="skills">
+		<h2>Skills</h2>
+		<h2>HTML5</h2>
+		<progress value="80" max="100"></progress>
+		<h2>CSS3</h2>
+		<progress value="60" max="100"></progress>
+		<h2>JAVA</h2>
+		<progress value="80" max="100"></progress>
+		<h2>JavaScript</h2>
+		<progress></progress>
+		<h2>Node.js</h2>
+		<progress></progress>
+		</section>
+		<div id="footer">
+			<div id="footer-menu">
+				<a href="#main" title="Main으로 이동">MAIN</a>
+				<a href="#home" title="Home으로 이동">HOME</a>
+				<a href="#about" title="About으로 이동">ABOUT</a>
+				<a href="#skills" title="skills로 이동">SKILLS</a>
+			</div>
+			<!--//footer-menu-->
+		</div>
+	</div>
+	</body>
+	</html>
