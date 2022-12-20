@@ -3,7 +3,7 @@ function addTodo() {
     var view_wrap = document.getElementById('hide');
     view.style.display = "inline-block";
     view_wrap.style.display = "block";
-
+    document.loginform.userid.focus();
     document.addform.title.focus();
 }
 
@@ -15,7 +15,7 @@ function hide_addTodo() {
 }
 
 function delete_all() {
-    if (confirm("To-Do 리스트를 모두 삭제할까요?") == true) {
+    if (confirm("리스트를 모두 삭제할까요?") == true) {
         document.location.href = "/ocy/deleteall";
     } else return;
 }

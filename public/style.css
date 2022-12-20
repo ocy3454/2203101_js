@@ -24,48 +24,21 @@ ol {
   margin:0px;
   padding:30px;
 }
-#loginpopup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, .7);
-  z-index: 1;
-}
 
-#loginpopup.hide {
-  display: none;
-}
-
-#loginpopup.has-filter {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-#loginpopup .content {
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
-}
-
-.sec_wrapper {
-    display: inline-block;
-}
-
-.login_wrap {
+#hide {
+    display: none;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     width: 550px;
     height: 600px;
     overflow: hidden;
     margin-top: -300px;
     margin-left: -275px;
+}
+
+.sec_wrapper {
+    display: inline-block;
 }
 
 .login_logo{
@@ -80,7 +53,7 @@ ol {
     margin: 3px 3px;
     display: block;
     color: #222;
-    width: 800px;
+    width: 550px;
     background-color: #eee;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     padding: 2rem 2rem;
@@ -132,78 +105,6 @@ input[type="password"]{
 }
 #grid #article {
   padding-left:60px;
-}
-.bttn-default {
-  color: #fff;
-}
-.bttn-primary,
-.bttn,
-.bttn-md {
-  color: #1d89ff;
-}
-.bttn-warning {
-  color: #feab3a;
-}
-.bttn-danger {
-  color: #ff5964;
-}
-.bttn-success {
-  color: #28b78d;
-}
-.bttn-royal {
-  color: #bd2df5;
-}
-.bttn,
-.bttn-lg,
-.bttn-md,
-.bttn-sm,
-.bttn-xs {
-  margin: 0;
-  padding: 0;
-  border-width: 0;
-  border-color: transparent;
-  background: transparent;
-  font-weight: 400;
-  cursor: pointer;
-  position: relative;
-}
-.bttn-md {
-  font-size: 20px;
-  font-family: inherit;
-  padding: 5px 12px;
-}
-.bttn-simple {
-  margin: 0;
-  padding: 0;
-  border-width: 0;
-  border-color: transparent;
-  background: transparent;
-  font-weight: 400;
-  cursor: pointer;
-  position: relative;
-  font-size: 20px;
-  font-family: inherit;
-  padding: 5px 12px;
-  overflow: hidden;
-  border-width: 0;
-  border-radius: 4px;
-  background: rgba(255,255,255,0.4);
-  color: #fff;
-  -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-}
-.bttn-simple:hover,
-.bttn-simple:focus {
-  opacity: 0.75;
-}
-.bttn-simple.bttn-md {
-  font-size: 20px;
-  font-family: inherit;
-  padding: 5px 20px;
-  border-radius: 20px;
-}
-.bttn-simple.bttn-primary {
-  background: #C8A5C4;
 }
 #grid #title {
   padding:15px 10px 15px 20px; /* 내부여백 padding값 순서대로 top right bottom left */
